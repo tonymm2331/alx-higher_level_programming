@@ -4,7 +4,7 @@ import random
 
 # Generate a random signed number between -10000 and 10000
 
-number = random.randint(-10, 10)
+number = random.randint(-10000, 10000)
 
 
 # Print the randomly generated number
