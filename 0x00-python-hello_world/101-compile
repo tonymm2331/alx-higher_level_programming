@@ -1,4 +1,6 @@
 #!/bin/bash
-python3 -m compileall $PYFILE -b
-Give feedback
+pyfile=$PYFILE
+pycfile=${pyfile%.py}.pyc
 
+echo "Compiling $pyfile ..."
+python3 -m py_compile $pyfile && mkdir -p __pycache__ && mv __pycache__/$pycfile . && rm -rf __pycache__
