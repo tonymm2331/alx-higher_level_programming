@@ -1,11 +1,16 @@
-def remove_char_at(input_str, n):
-    if n < 0 or n >= len(input_str):
-        return input_str  # Return the original string if index is out of bounds
+#!/usr/bin/env python3
+def uppercase(str):
+    for char in str:
+        ascii_value = ord(char)
+        if ord('a') <= ascii_value <= ord('z'):
+            # Convert lowercase letter to uppercase using ASCII values
+            uppercase_char = chr(ascii_value - ord('a') + ord('A'))
+            print("{}".format(uppercase_char), end="")
+        else:
+            # Print non-alphabetic characters as they are
+            print("{}".format(char), end="")
+    print()  # Print a new line at the end
 
-    return input_str[:n] + input_str[n + 1:]
-
-# Example usage:
-original_str = "Hello, World!"
-result_str = remove_char_at(original_str, 7)
-print(result_str)
-
+# Test cases
+uppercase("best")
+uppercase("Best School 98 Battery street")
